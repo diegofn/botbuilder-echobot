@@ -1,0 +1,8 @@
+{
+  "$kind": "Microsoft.LuisRecognizer",
+  "id": "LUIS_weatherbot",
+  "applicationId": "=settings.luis.weatherbot_en_us_lu.appId",
+  "version": "=settings.luis.weatherbot_en_us_lu.version",
+  "endpoint": "=settings.luis.endpoint",
+  "endpointKey": "=settings.luis.endpointKey"
+}

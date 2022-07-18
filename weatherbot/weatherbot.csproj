@@ -1,0 +1,21 @@
+﻿
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AspNetCoreHostingModel>OutOfProcess</AspNetCoreHostingModel>
+    <UserSecretsId>e9177a85-d4a2-4eca-8e79-7d392f3b2440</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="**/*.blu;**/*.dialog;**/*.lg;**/*.lu;**/*.model;**/*.onnx;**/*.qna;**/*.txt" Exclude="$(BaseOutputPath)/**;$(BaseIntermediateOutputPath)/**;wwwroot/**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Bot.Builder.Community.Adapters.Webex" Version="4.13.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.8" />
+    <PackageReference Include="Microsoft.Bot.Builder.Adapters.Webex" Version="4.16.1" />
+    <PackageReference Include="Microsoft.Bot.Builder.AI.Luis" Version="4.16.0" />
+    <PackageReference Include="Microsoft.Bot.Builder.AI.QnA" Version="4.16.0" />
+    <PackageReference Include="Microsoft.Bot.Builder.Dialogs.Adaptive.Runtime" Version="4.16.0" />
+  </ItemGroup>
+</Project>
