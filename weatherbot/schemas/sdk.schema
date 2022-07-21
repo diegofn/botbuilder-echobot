@@ -9452,8 +9452,8 @@
         "$kind"
       ],
       "$package": {
-        "name": "Microsoft.Bot.Builder.Adapters.Webex",
-        "version": "4.16.1"
+        "name": "Bot.Builder.Community.Adapters.Webex",
+        "version": "1.0.0"
       },
       "additionalProperties": false,
       "patternProperties": {

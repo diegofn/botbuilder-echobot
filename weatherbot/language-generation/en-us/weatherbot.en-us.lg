@@ -6,12 +6,11 @@
 ]
 
 # SendActivity_Greeting_text()
-- Welcome to your bot.
-
+- Welcome to your bot. type *weather* to get started.
 # SendActivity_DidNotUnderstand()
 [Activity
     Text = ${SendActivity_DidNotUnderstand_text()}
 ]
 
 # SendActivity_DidNotUnderstand_text()
-- Sorry 😥 I did not get that.
+- Sorry 😥 I did not get that. Type *weather* to start.

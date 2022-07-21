@@ -43,7 +43,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "value": "dialog.foreach.value"
         }
       ]
     },
@@ -63,9 +64,79 @@
           "activity": "${SendActivity_DidNotUnderstand()}"
         }
       ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "H6oHtk",
+        "name": "weather"
+      },
+      "intent": "weather",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "CFkDzn"
+          },
+          "activityProcessed": true,
+          "dialog": "get_weather"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "DPZTDf",
+        "name": "cancel"
+      },
+      "intent": "cancel",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "DF5eTJ"
+          },
+          "activityProcessed": true,
+          "dialog": "CancelDialog"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "vbtKaR",
+        "name": "help"
+      },
+      "intent": "help",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "eSQqOW"
+          },
+          "activityProcessed": true,
+          "dialog": "HelpDialog"
+        }
+      ]
     }
   ],
   "generator": "weatherbot.lg",
   "id": "weatherbot",
-  "recognizer": "weatherbot.lu.qna"
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": [
+      {
+        "intent": "weather",
+        "pattern": "weather"
+      },
+      {
+        "intent": "cancel",
+        "pattern": "cancel|stop|quit"
+      },
+      {
+        "intent": "help",
+        "pattern": "help|support|advice"
+      }
+    ]
+  }
 }
